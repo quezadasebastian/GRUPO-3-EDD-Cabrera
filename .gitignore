@@ -1,12 +1,5 @@
-# Ignorar ejecutables
 *.exe
-
-# Ignorar carpetas de configuración de VSCode (en raiz y subcarpetas)
 .vscode/
-
-# Ignorar la carpeta S2 por ahora (según tu imagen e59e26)
 S2/
-
-# Ignorar las otras tareas de S1 (según tu imagen e5efc9)
 S1/TAREA S1_2/
 S1/TAREA S1_3/
