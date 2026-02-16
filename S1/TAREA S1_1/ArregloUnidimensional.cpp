@@ -17,7 +17,7 @@ using namespace std;
 class ArregloUnidimensional {
 private:
     string elementos[10];
-    int tamano;
+    int tamanoNom;
     static const int CAPACIDAD_MAXIMA = 10;
 
 public:
@@ -25,7 +25,7 @@ public:
      * Constructor que inicializa un arreglo vacío
      */
     ArregloUnidimensional() {
-        tamano = 0;
+        tamanoNom = 0;
     }
 
     /**
@@ -36,21 +36,21 @@ public:
      * @throw runtime_error si el arreglo esta lleno
      */
     void insertar(int indice, string nombre) {
-        if (tamano == CAPACIDAD_MAXIMA)
+        if (tamanoNom == CAPACIDAD_MAXIMA)
             throw runtime_error("Arreglo lleno");
 
-        if (indice < 0 || indice > tamano)
+        if (indice < 0 || indice > tamanoNom)
             throw out_of_range("Indice fuera de rango");
 
         if (nombre.empty())
             return;
 
-        for (int i = tamano; i > indice; i--) {
+        for (int i = tamanoNom; i > indice; i--) {
             elementos[i] = elementos[i - 1];
         }
 
         elementos[indice] = nombre;
-        tamano++;
+        tamanoNom++;
     }
 
     /**
@@ -60,16 +60,16 @@ public:
      * @return nombre eliminado
      */
     string eliminar(int indice) {
-        if (indice < 0 || indice >= tamano)
+        if (indice < 0 || indice >= tamanoNom)
             throw out_of_range("Indice fuera de rango");
 
         string eliminado = elementos[indice];
 
-        for (int i = indice; i < tamano - 1; i++) {
+        for (int i = indice; i < tamanoNom - 1; i++) {
             elementos[i] = elementos[i + 1];
         }
 
-        tamano--;
+        tamanoNom--;
         return eliminado;
     }
 
@@ -79,7 +79,7 @@ public:
      * @throw out_of_range indice no valido
      */
     string obtener(int indice) {
-        if (indice < 0 || indice >= tamano)
+        if (indice < 0 || indice >= tamanoNom)
             throw out_of_range("Indice fuera de rango");
 
         return elementos[indice];
@@ -89,7 +89,7 @@ public:
      * @return tamano devuelve el numero de elementos
      */
     int getTamano() {
-        return tamano;
+        return tamanoNom;
     }
 
     /**
@@ -97,7 +97,7 @@ public:
      * @return true si alcanzó la capacidad máxima (10)
      */
     bool estaLleno() {
-        return tamano == CAPACIDAD_MAXIMA;
+        return tamanoNom == CAPACIDAD_MAXIMA;
     }
 
     /**
@@ -105,15 +105,15 @@ public:
      * muestra solo los elementos reales (hasta "tamaño")
      */
     void imprimir() {
-        if (tamano == 0) {
+        if (tamanoNom == 0) {
             cout << "Arreglo vacio []";
             return;
         }
 
         cout << "[";
-        for (int i = 0; i < tamano; i++) {
+        for (int i = 0; i < tamanoNom; i++) {
             cout << elementos[i];
-            if (i < tamano - 1) cout << ", ";
+            if (i < tamanoNom - 1) cout << ", ";
         }
         cout << "]";
     }
