@@ -1,19 +1,18 @@
-#include "cola.cpp"
+#include <iostream>
+#include "pila.h"
 
 int main() {
-    CQueue<int> cola;
+    Stack<int> s;
 
-    cola.enqueue(10);
-    cola.enqueue(20);
-    cola.enqueue(30);
+    s.push(10);
+    s.push(20);
+    s.push(30);
 
-    cout << "Front: " << cola.front() << endl;   // 10
-    cout << "Back: " << cola.back() << endl;     // 30
-    cout << "Search 20: " << cola.search(20) << endl; // 1
+    std::cout << "Top: " << s.top() << std::endl; // 30
+    s.pop();
+    std::cout << "Top despues de pop: " << s.top() << std::endl; // 20
 
-    cout << "Dequeue: " << cola.dequeue() << endl; // 10
-    cola.removeByValue(30);
+    std::cout << "Tamano actual: " << s.size() << std::endl;
 
-    cout << "Front después de operaciones: " << cola.front() << endl; // 20
     return 0;
 }
