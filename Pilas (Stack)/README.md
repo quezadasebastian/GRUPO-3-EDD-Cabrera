@@ -1,32 +1,17 @@
-# Colas (Queue)
+# Pilas (Stack) en C++
 
-## Concepto
-Una cola es una estructura de datos lineal que sigue el principio **FIFO (First In, First Out)**: el primero en entrar es el primero en salir.
+## Teoria
+Una **pila** es una estructura de datos LIFO (Last In, First Out).  
+El ultimo elemento en entrar es el primero en salir.
 
-## Operaciones Fundamentales
-- **enqueue(x):** Inserta un elemento al final.
-- **dequeue():** Elimina y retorna el frente.
-- **front():** Retorna el frente sin eliminar.
-- **back():** Retorna el último sin eliminar.
-- **empty():** Verifica si está vacía.
+### Operaciones principales
+- **push(x):** Inserta un elemento en la pila.
+- **pop():** Elimina el ultimo elemento.
+- **top():** Devuelve el ultimo elemento sin eliminarlo.
+- **isEmpty():** Verifica si la pila esta vacia.
+- **size():** Devuelve el numero de elementos.
 
-## Implementación Circular
-La cola se implementa con un arreglo circular. Los índices `front` y `rear` avanzan con el operador módulo `%`.
-
-## Ejemplo de Uso
-```cpp
-CQueue<int> cola;
-cola.enqueue(10);
-cola.enqueue(20);
-cola.enqueue(30);
-
-cout << cola.front(); // 10
-cola.dequeue();       // elimina 10
-
-Capacidad = 8, Count = 3
-┌───┬───┬───┬───┬───┬───┬───┬───┐
-│10 │20 │30 │   │   │   │   │   │
-└───┴───┴───┴───┴───┴───┴───┴───┘
- ↑               ↑
-front           rear
-
+## Ejemplo de uso
+```bash
+g++ main.cpp pila.cpp -o pilas
+./pilas
