@@ -1,0 +1,45 @@
+# ==========================================
+# C++ / CMake (Backend)
+# ==========================================
+# Ignorar carpetas de compilación
+/server-cpp/build/
+/server-cpp/bin/
+/server-cpp/out/
+
+# Ignorar ejecutables y objetos
+*.exe
+*.out
+*.o
+*.a
+*.dylib
+*.so
+
+# ==========================================
+# Java / JavaFX (Frontend)
+# ==========================================
+# Ignorar compilados de Java
+*.class
+*.jar
+*.war
+
+# Ignorar carpetas de Maven/Gradle
+/client-java/target/
+/client-java/build/
+/client-java/.gradle/
+
+# ==========================================
+# Entornos de Desarrollo (IDEs) y SO
+# ==========================================
+# VS Code
+.vscode/
+
+# IntelliJ IDEA / Eclipse
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
