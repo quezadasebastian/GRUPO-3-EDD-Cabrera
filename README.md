@@ -13,7 +13,7 @@ GRUPO_3_EDD_Cabrera/
 ├── protocol/                    # 🌉 Contratos de Red (Para todo el equipo)
 │   └── comandos_tcp.md          # Diccionario de mensajes (Ej. REQ_PLAY -> RES_OK)
 │
-├── client-java/                 # ☕ FRONTEND (Maven/Gradle + JavaFX) - Equipo Java
+├── clientjava/                 # ☕ FRONTEND (Maven/Gradle + JavaFX) - Equipo Java
 │   ├── pom.xml                  # Dependencias de JavaFX
 │   └── src/
 │       ├── main/java/com/grupo3/yugioh/

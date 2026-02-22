@@ -22,11 +22,12 @@
 *.class
 *.jar
 *.war
+*.lst
 
 # Ignorar carpetas de Maven/Gradle
-/client-java/target/
-/client-java/build/
-/client-java/.gradle/
+/clientjava/target/
+/clientjava/build/
+/clientjava/.gradle/
 
 # ==========================================
 # Entornos de Desarrollo (IDEs) y SO
