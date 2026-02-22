@@ -5,6 +5,7 @@
 /server-cpp/build/
 /server-cpp/bin/
 /server-cpp/out/
+/build/
 
 # Ignorar ejecutables y objetos
 *.exe
